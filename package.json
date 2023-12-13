@@ -12,6 +12,7 @@
   "author": "Maxim Malevich",
   "license": "ISC",
   "dependencies": {
+    "imask": "^7.2.0",
     "sass": "^1.69.5"
   },
   "devDependencies": {

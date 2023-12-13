@@ -125,7 +125,6 @@ header{
 }
 .burger{
     cursor: pointer;
-    display: none;
     position: relative;
     width: 36px;
     height: 36px;
@@ -148,10 +147,7 @@ header{
         width: 36px;
         height: 3px;
         transition: transform .2s linear, top .2s linear;
-    }
-    @media(max-width: 992px){
-        display: block;
-    }
+    }   
 }
 .burger_active{
     &::after{
@@ -162,4 +158,10 @@ header{
         top: 50%;
         transform: rotate(45deg);
     } 
+}
+.burger_main{
+    display: none;
+    @media(max-width: 992px){
+        display: block;
+    }
 }

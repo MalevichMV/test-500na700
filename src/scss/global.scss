@@ -1,6 +1,7 @@
 @import 'mixins';
 @import 'variables';
 @import 'header';
+@import 'modal';
 
 html {
     scroll-behavior: smooth;
@@ -12,6 +13,9 @@ ol, ul {
 	list-style: none;
     padding: 0;
 }
+*{
+    margin: 0;
+}
 main{
     padding-top: 120px;
     @media(max-width: 992px){
@@ -19,6 +23,7 @@ main{
     }
 }
 body {
+    color: $black;
     @include desktop_typography;
     box-sizing: border-box;
     margin: 0;
@@ -26,10 +31,12 @@ body {
     padding: 0;
 }
 section{
-    padding: 40px;
+    padding: 0 40px;
     background-color: $black;
     color: white
 }
+
+
 .link{
     cursor: pointer;
     color: $white;
@@ -47,6 +54,38 @@ section{
         width: 44px;
         height: 53px;
     }
+}
+.checkbox{
+    input{
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+    }
+    input:checked + label::before{
+        background-image: url('../img/checkbox.svg'), $gradient;
+        
+    }
+    label{
+        cursor: pointer;
+        display: inline-flex;
+        align-items: center;
+        user-select: none;
+        &::before{
+            content: '';
+            display: inline-block;
+            min-width: 18px;
+            min-height: 18px;
+            border: 1px solid;
+            border-image: $gradient;
+            border-image-slice: 1;
+            margin-right: 10px;
+        }
+    }
+}
+input{
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid $black;
 }
 button{
     cursor: pointer;
@@ -88,6 +127,9 @@ button{
 }
 .button_white{
     color: $white;
+}
+.button__contact-us{
+    align-self: self-start;
 }
 .container{
     max-width: 1360px;
