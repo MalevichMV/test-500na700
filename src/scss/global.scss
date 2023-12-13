@@ -1,0 +1,96 @@
+@import 'mixins';
+@import 'variables';
+@import 'header';
+
+html {
+    scroll-behavior: smooth;
+}
+a {
+    text-decoration:none;
+}
+ol, ul {
+	list-style: none;
+    padding: 0;
+}
+main{
+    padding-top: 120px;
+    @media(max-width: 992px){
+        padding-top: 89px;
+    }
+}
+body {
+    @include desktop_typography;
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    padding: 0;
+}
+section{
+    padding: 40px;
+    background-color: $black;
+    color: white
+}
+.link{
+    cursor: pointer;
+    color: $white;
+    transition: color .1s linear;
+    &:hover{
+        color: rgba($white, 0.3);
+    }  
+}
+.arrow{
+    transition: transform .1s linear;
+}
+.logo{
+    z-index: 5;
+    @media(max-width: 992px){
+        width: 44px;
+        height: 53px;
+    }
+}
+button{
+    cursor: pointer;
+    padding: 12px 20px;
+    position: relative;
+    background: transparent;
+    border: none;
+    border-radius: 40px;
+    z-index: 1;
+    &:after{
+        padding: 12px 20px;
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 40px;
+        border: 1px solid transparent;
+        background: $gradient border-box;
+        -webkit-mask: 
+            linear-gradient(#fff 0 0) padding-box, 
+            linear-gradient(#fff 0 0);
+        mask-composite: exclude; 
+    }
+    &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: -2;
+        height: 100%;
+        background: $gradient;
+        border-radius: 40px;
+        opacity: 0;
+        transition: opacity .2s linear;
+    }
+    &:hover:before{
+        opacity: 1;
+    }
+}
+.button_white{
+    color: $white;
+}
+.container{
+    max-width: 1360px;
+    margin: 0 auto;
+}
+
