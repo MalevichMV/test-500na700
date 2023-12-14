@@ -1,0 +1,26 @@
+.news{
+    padding-top: 150px;
+    grid-column-start: 1;
+    grid-column-end: 7;
+}
+.news__list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 40px;
+    margin-top: 40px;
+}
+.news__img{
+    margin-bottom: 20px;
+    img{
+        width: 100%;
+    }
+}
+.news__title{
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.news__subtitle{
+    color: rgba($white, 0.5);
+    margin-bottom: 20px;
+}

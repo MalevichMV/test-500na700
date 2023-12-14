@@ -2,6 +2,8 @@
 @import 'variables';
 @import 'header';
 @import 'modal';
+@import 'slider';
+@import 'news';
 
 html {
     scroll-behavior: smooth;
@@ -18,6 +20,7 @@ ol, ul {
 }
 main{
     padding-top: 120px;
+    background-color: $black;
     @media(max-width: 992px){
         padding-top: 89px;
     }
@@ -29,14 +32,25 @@ body {
     margin: 0;
     font-family: 'Inter', sans-serif;
     padding: 0;
+    @media(max-width: 768px){
+        @include phone_typography;
+    }
 }
 section{
     padding: 0 40px;
-    background-color: $black;
-    color: white
+    color: white;
+    @media(max-width: 768px){
+        padding: 0;
+    }
 }
-
-
+.wrapper{
+    position: relative;
+    display: grid;
+    margin: 0 auto;
+    max-width: 1440px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 32px;
+}
 .link{
     cursor: pointer;
     color: $white;
@@ -134,5 +148,8 @@ button{
 .container{
     max-width: 1360px;
     margin: 0 auto;
+}
+.section-title{
+    text-transform: uppercase;
 }
 

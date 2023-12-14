@@ -35,3 +35,10 @@
         line-height: 15px;
     }
 }
+@mixin phone_typography {
+    h1{
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 26px;
+    }
+}
