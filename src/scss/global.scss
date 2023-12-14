@@ -4,6 +4,7 @@
 @import 'modal';
 @import 'slider';
 @import 'news';
+@import 'faq';
 
 html {
     scroll-behavior: smooth;
@@ -16,6 +17,7 @@ ol, ul {
     padding: 0;
 }
 *{
+    box-sizing: border-box;
     margin: 0;
 }
 main{
@@ -28,7 +30,6 @@ main{
 body {
     color: $black;
     @include desktop_typography;
-    box-sizing: border-box;
     margin: 0;
     font-family: 'Inter', sans-serif;
     padding: 0;
@@ -40,7 +41,7 @@ section{
     padding: 0 40px;
     color: white;
     @media(max-width: 768px){
-        padding: 0;
+        padding: 0 10px;
     }
 }
 .wrapper{

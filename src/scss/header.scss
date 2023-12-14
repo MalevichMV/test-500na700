@@ -65,7 +65,6 @@ header{
     grid-column-start: 2;
     grid-column-end: 4;
     z-index: 4;
-    box-sizing: border-box;
     @media(max-width: 1200px){
         grid-column-end: 5;
     }

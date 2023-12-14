@@ -67,7 +67,7 @@
     text-transform: uppercase;
     margin-bottom: 20px;
     @media(max-width: 768px){
-        margin: 0 10px 10px 10px;
+        margin-bottom: 10px;
     }
 }
 .slide__subtitle{
@@ -76,7 +76,5 @@
     color: rgba($white, 0.5);
     @media(max-width: 768px){
         margin-bottom: 80px;
-        margin-left: 10px;
-        margin: 0 10px 80px 10px;
     }
 }

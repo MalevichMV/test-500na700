@@ -2,6 +2,9 @@
     padding-top: 150px;
     grid-column-start: 1;
     grid-column-end: 7;
+    @media(max-width: 992px){
+        padding-top: 80px;
+    }
 }
 .news__list{
     display: grid;
@@ -9,6 +12,9 @@
     grid-column-gap: 20px;
     grid-row-gap: 40px;
     margin-top: 40px;
+    @media(max-width: 992px){
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 .news__img{
     margin-bottom: 20px;
