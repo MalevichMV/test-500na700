@@ -1,4 +1,8 @@
-import IMask from 'imask';
+import {showSuccessMessage, showErrorMessage} from './messagesManipulation';
+
+// переменные для очищения таймаутов в файле messagesManipulation.js
+let successTimeout;
+let errorTimeout;
 
 function modal(){
     // закрытие модального окна
@@ -42,12 +46,19 @@ function modal(){
     form.addEventListener('submit', (e) => {
         e.preventDefault();
         const phoneInputValue = e.target[1].value;
+
+        const message = document.querySelector('.message_contact-us'); 
+
         if (phoneInputValue.length === 16)
         {
             form.reset();
-            alert("Данные приняты!");
+            const timeouts = showSuccessMessage(message, successTimeout, errorTimeout);
+            successTimeout = timeouts.successTimeout;
+            errorTimeout = timeouts.errorTimeout;
         } else {
-            alert("Проверьте правильность введенных данных")
+            const timeouts = showErrorMessage(message, successTimeout, errorTimeout);
+            successTimeout = timeouts.successTimeout;
+            errorTimeout = timeouts.errorTimeout;
         }
     }); 
 }
