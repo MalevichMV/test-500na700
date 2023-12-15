@@ -15,6 +15,9 @@
     @media(max-width: 992px){
         grid-template-columns: repeat(2, 1fr);
     }
+    @media(max-width: 576px){
+        display: block;
+    }
 }
 .news__img{
     margin-bottom: 20px;
@@ -27,6 +30,10 @@
     margin-bottom: 10px;
 }
 .news__subtitle{
+    -webkit-line-clamp: 3; 
+    display: -webkit-box; 
+    -webkit-box-orient: vertical; 
+    overflow: hidden;
     color: rgba($white, 0.5);
     margin-bottom: 20px;
 }

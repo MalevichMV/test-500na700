@@ -33,10 +33,11 @@ footer{
     }
 }
 .footer__sources{
-    display: flex;
-    justify-content: space-between;
+    display: block;
     @media(max-width: 768px){
         margin-bottom: 30px;
+        display: flex;
+        justify-content: space-between;
     }
 }
 .footer__info{
