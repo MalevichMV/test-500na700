@@ -45,7 +45,9 @@ function modal(){
         if (phoneInputValue.length === 16)
         {
             form.reset();
-            closeModal();
+            alert("Данные приняты!");
+        } else {
+            alert("Проверьте правильность введенных данных")
         }
     }); 
 }
