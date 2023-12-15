@@ -5,6 +5,7 @@ import subscribe from './modules/subscribe';
 import inputMasks from './modules/inputMasks';
 import news from './modules/news';
 import projects from './modules/projects';
+import checkboxes from './modules/checkboxes';
 
 import '../scss/global.scss'
 
@@ -16,4 +17,5 @@ window.addEventListener('DOMContentLoaded', function() {
     inputMasks();
     news();
     projects();
+    checkboxes();
 }); 

@@ -35,15 +35,7 @@ function modal(){
         if (e.target === modal) {
             closeModal();
         }
-    });
-
-    // изменение состояния чекбокса
-    const checkbox = document.querySelector('.checkbox_contact-us');
-    const checkboxInput = checkbox.querySelector('input');
-    checkbox.addEventListener('click', () => {
-        checkboxInput.checked = !checkboxInput.checked;
-    }); 
-      
+    });      
 
     // обработка данных с формы
     const form = document.querySelector('.contact-us');

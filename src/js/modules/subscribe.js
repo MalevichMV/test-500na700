@@ -1,11 +1,4 @@
 function subscribe(){
-    // изменение состояния чекбокса
-    const checkbox = document.querySelector('.checkbox_subscribe');
-    const checkboxInput = checkbox.querySelector('input');
-    checkbox.addEventListener('click', () => {
-        checkboxInput.checked = !checkboxInput.checked;
-    }); 
-
     // обработка данных с формы
     const form = document.querySelector('.subscribe__form');
     form.addEventListener('submit', (e) => {
