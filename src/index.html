@@ -10,15 +10,15 @@
 </head>
 <body>
     <header>
-        <div class="container">
+        <div class="wrapper">
             <div class="header">
-                <img class="logo" src="assets/img/Logo.svg">
+                <img class="header__logo" src="assets/img/Logo.svg">
                 <div class="header__menu">
                     <nav>
                         <ul class="header__nav">
                             <li class="header__nav-item header__nav-item_paragraph">
                                 <div class="header__nav-point">
-                                    <a>О нас</a>
+                                    <a href="#">О нас</a>
                                     <img class="arrow" src="assets/img/Arrow.svg">
                                 </div>                                
                                 <div class="header__links">
@@ -33,7 +33,7 @@
                             </li>
                             <li class="header__nav-item header__nav-item_paragraph">
                                 <div class="header__nav-point">
-                                    <a>Проекты</a>
+                                    <a href="#slider">Проекты</a>
                                     <img class="arrow" src="assets/img/Arrow.svg">
                                 </div>
                                 <div class="header__links">
@@ -47,13 +47,13 @@
                                 </div>
                             </li>
                             <li class="header__nav-item">
-                                <a class="link" href="#">Новости</a>
+                                <a class="link" href="#news">Новости</a>
                             </li>
                             <li class="header__nav-item">
-                                <a class="link" href="#">FAQ</a>
+                                <a class="link" href="#faq">FAQ</a>
                             </li>
                             <li class="header__nav-item">
-                                <a class="link" href="#">Контакты</a>
+                                <a class="link" href="#subscribe">Контакты</a>
                             </li>
                         </ul>
                     </nav>
@@ -184,6 +184,71 @@
                 </div>
             </section>
         </div>
+
+
+
+        <div class="white-background">
+            <div class="wrapper">
+                <section class="subscribe" id="subscribe">
+                    <div class="subscribe__description">
+                        <h1 class="subscribe__title">Подпишись на рассылку</h1>
+                        <p class="subscribe__subtitle">Отправляем анонсы новых статей, выпусков и трансляций</p>
+                    </div>
+                    <form class="subscribe__form">
+                        <div class="subscribe__input-list">
+                            <input class="input_email" type="email" placeholder="Электронная почта" required>    
+                            <input class="input_date" type="text" placeholder="Дата (например, 01.01.1990)" required>
+                            <input class="input_phone" type="tel" placeholder="Телефон" required> 
+                            <input class="input_time" type="text" placeholder="Время (например, 10:00)" required> 
+                        </div>   
+                        <div class="checkbox checkbox_subscribe">                              
+                            <input type="checkbox" required/>
+                            <label class="caption">Я согласен (-а) на обработку персональных данных</label>                        
+                        </div>  
+                        <button type="submit" class="button__contact-u s">Отправить</button>
+                    </form>
+                </section>
+            </div>
+        </div>
     </main>
+
+    <footer>
+        <div class="wrapper">
+            <div class="footer">
+                <div class="footer__sources">
+                    <img class="footer__logo" src="assets/img/whiteLogo.svg">
+                    <div class="footer__icon-list">
+                        <a class="footer__icon" href="https://www.youtube.com/"><img src="assets/img/youtube.svg"></a>
+                        <a class="footer__icon" href="https://web.telegram.org"><img src="assets/img/telegram.svg"></a>
+                        <a class="footer__icon" href="https://vk.com"><img src="assets/img/vk.svg"></a>
+                    </div>
+                </div>
+                <nav>
+                    <ul class="footer__nav">
+                        <li class="footer__nav-item">
+                            <a class="link" href="#">О нас</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="link" href="#slider">Проекты</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="link" href="#news">Новости</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="link" href="#faq">FAQ</a>
+                        </li>
+                        <li class="footer__nav-item">
+                            <a class="link" href="#subscribe">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="footer__info">
+                    <a>г. Горгород, <br>ул. Мегаполисная, 1</a>
+                    <a class="link" href="tel:+70000000000">+7 (000) 000-00-00</a>
+                    <a class="link" href="mailto:john@example.com">email@email.ru</a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

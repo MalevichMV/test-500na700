@@ -1,5 +1,5 @@
 header{
-    padding: 20px 40px 15px 40px;
+    padding: 20px 0 15px 0;
     position: fixed;
     top: 0;
     left: 0;
@@ -17,6 +17,9 @@ header{
     }
 }
 .header{
+    grid-column-start: 1;
+    grid-column-end: 7;
+    padding: 0 40px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     @media(max-width: 1200px){
@@ -26,6 +29,16 @@ header{
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+    @media(max-width: 768px){
+        padding: 0 10px;
+    }
+}
+.header__logo{
+    z-index: 5;
+    @media(max-width: 992px){
+        width: 44px;
+        height: 53px;
     }
 }
 .header__nav{
@@ -53,9 +66,9 @@ header{
     cursor: default;
     display: flex;
     align-items:center;
-    color: $white;
     a{
         margin-right: 4px;
+        color: $white;
     }
 }
 .header__menu{

@@ -23,7 +23,6 @@ function modal(){
     }); 
 
 
-
     // закрытие модального окна при клике на "escape"
     document.addEventListener('keydown', (e) => {
         if (e.code === "Escape" && modal.classList.contains('modal_open')) { 
@@ -44,18 +43,14 @@ function modal(){
     checkbox.addEventListener('click', () => {
         checkboxInput.checked = !checkboxInput.checked;
     }); 
-
-    // настройка маски для инпута
-    const phoneInput = document.querySelector('.input_phone')
-    const phoneMask = new IMask(phoneInput, {
-        mask: "+{7}(000)000-00-00",
-    });    
+      
 
     // обработка данных с формы
     const form = document.querySelector('.contact-us');
     form.addEventListener('submit', (e) => {
         e.preventDefault();
-        if (phoneMask.masked.isComplete)
+        const phoneInputValue = e.target[1].value;
+        if (phoneInputValue.length === 16)
         {
             form.reset();
             closeModal();
