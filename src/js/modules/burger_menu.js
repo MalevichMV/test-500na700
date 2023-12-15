@@ -3,9 +3,27 @@ function burger_menu(){
     const menu = document.querySelector('.header__menu');
     const navItems = document.querySelectorAll('.header__nav-item_paragraph');
 
+    // закрытие меню на мобильном устройстве
+    const closeMobileMenu = () => {
+        burger.classList.remove("burger_active");
+        menu.classList.remove("header__menu_active");
+        document.body.style.overflow = 'auto';
+    }
+
+    // открытие меню на мобильном устройстве
+    const openMobileMenu = () => {
+        burger.classList.add("burger_active");
+        menu.classList.add("header__menu_active");
+        document.body.style.overflow = 'hidden';
+    }
+
     burger.addEventListener('click', () => {
-        burger.classList.toggle("burger_active");
-        menu.classList.toggle("header__menu_active");
+        if (menu.classList.contains("header__menu_active"))
+        {
+            closeMobileMenu();
+        } else {
+            openMobileMenu();
+        };
     }); 
 
     // вывод пунктов менб при наведении на навигационную ссылку содержащую подпункты
@@ -24,8 +42,7 @@ function burger_menu(){
         elem.addEventListener('click', () => {
             if (menu.classList.contains("header__menu_active"))
             {
-                burger.classList.remove("burger_active");
-                menu.classList.remove("header__menu_active");
+                closeMobileMenu();
             }
         });
     });
